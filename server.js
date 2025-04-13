@@ -19,5 +19,7 @@ app.get('/news', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+const port = process.env.PORT || 8080;  // Use Render's default port if available
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
